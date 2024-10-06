@@ -1,0 +1,53 @@
+{
+	"name": "@svelte.codes/forms",
+	"svelte": "./dist/index.js",
+	"version": "0.0.26",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "svelte-kit sync && svelte-package",
+		"build:css": "postcss --dir ./public/styles/ --config ./postcss.config.cjs ./src/app.pcss --ext .css --verbose -w",
+		"package": "svelte-kit package",
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"release": "npm run check && svelte-package && npm version patch && cp package.json dist/package.json && cd dist && npm version patch && npm publish",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "^2.6.1",
+		"@sveltejs/package": "^2.3.5",
+		"@sveltejs/vite-plugin-svelte": "^4.0.0-next.0",
+		"@tsconfig/svelte": "^5.0.4",
+		"@types/node": "^22.7.4",
+		"autoprefixer": "^10.4.20",
+		"nodemon": "^3.1.7",
+		"postcss": "^8.4.47",
+		"postcss-cli": "^11.0.0",
+		"postcss-load-config": "^6.0.1",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.7",
+		"rollup": "^4.24.0",
+		"svelte": "^5.0.0-next.262",
+		"svelte-check": "^4.0.4",
+		"tailwindcss": "^3.4.13",
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.2",
+		"vite": "^5.4.8",
+		"vite-plugin-dts": "^4.2.3"
+	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"svelte": "./dist/index.js"
+		},
+		"./styles/app.pcss": "./public/styles/app.pcss"
+	},
+	"dependencies": {
+		"bits-ui": "^0.21.16",
+		"rxjs": "^7.8.1",
+		"tailwind-merge": "^2.5.3"
+	}
+}
