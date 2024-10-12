@@ -1,0 +1,27 @@
+{
+	"useTabs": true,
+	"singleQuote": false,
+	"trailingComma": "none",
+	"printWidth": 300,
+	"bracketSameLine": true,
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		},
+		{
+			"files": "*.html",
+			"options": {
+				"parser": "html"
+			}
+		},
+		{
+			"files": "*.ts",
+			"options": {
+				"parser": "typescript"
+			}
+		}
+	]
+}
