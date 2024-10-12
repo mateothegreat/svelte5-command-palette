@@ -1,6 +1,11 @@
-# Svelte 5 Command Palette
+# Svelte 5 Command Palette 🤘
 
+Interactive command palette for Svelte 5.
 ![alt text](docs/screenshot.png)
+
+* Custom renderable items by passing a custom svelte component 💪.
+* Keyboard navigable, hotkeys ready ⌨️.
+* Optional search input with debounce 🔍.
 
 ## Install
 
