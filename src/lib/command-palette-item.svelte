@@ -1,11 +1,18 @@
 <script lang="ts">
-	import type { CommandPaletteBaseProps } from "./types";
+  import type { Snippet } from 'svelte';
 
-	type CommandoItemProps = {
-		selected: () => void;
-	} & CommandPaletteBaseProps;
+  type Props = {
+    children?: Snippet;
+    onclick?: () => void;
+  };
 
-	let { children, selected }: CommandoItemProps = $props();
+  let { children, onclick }: Props = $props();
 </script>
 
-{@render children()}
+{#if onclick}
+  <div on:click={onclick}>
+    {@render children()}
+  </div>
+{:else}
+  {@render children()}
+{/if}

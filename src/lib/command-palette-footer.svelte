@@ -1,7 +1,13 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
+  type Props = {
+    children?: Snippet;
+    class?: string;
+  };
+  let { children, class: className }: Props = $props();
 </script>
 
-<div class="flex items-center gap-2 bg-white/5 h-12">
-	<button class="btn btn-primary">Submit</button>
-	<button class="btn btn-secondary">Cancel</button>
+<div class="h-12 {className}">
+  {@render children()}
 </div>

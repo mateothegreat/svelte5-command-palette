@@ -10,6 +10,6 @@
 	// commandoOpen(CommandPaletteBody);
 </script>
 
-<div class="h-[900px] border-4 border-red-500 bg-black">
+<div class="h-full w-full absolute p-20 bg-zinc-900">
 	<ExampleBody />
 </div>
