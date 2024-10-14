@@ -1,6 +1,6 @@
 {
   "name": "@mateothegreat/svelte5-command-palette",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "svelte": "./index.ts",
   "module": "./index.ts",
