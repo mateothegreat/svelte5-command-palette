@@ -4,6 +4,7 @@
 
 <CommandPalette.Root onclose={() => console.log('close')} class="w-[600px]">
   <CommandPalette.Content onsearch={(terms: string) => console.log('search', terms)}>
+    <CommandPalette.Input onsearch={(terms: string) => console.log('search', terms)} />
     <CommandPalette.Section title="Recent searches">
       <CommandPalette.Item onclick={() => console.log('selected')}>
         <div class="text-sm text-slate-400">
@@ -72,7 +73,7 @@
       </CommandPalette.Item>
     </CommandPalette.Section>
     <CommandPalette.Footer class="flex h-12 items-center justify-end gap-4 p-4">
-      <div class="flex justify-between">
+      <div class="flex gap-4">
         <button class="">Select</button>
         <button class="text-slate-600">Cancel</button>
       </div>
